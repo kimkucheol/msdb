@@ -1,0 +1,54 @@
+.menu{
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.menu>div{
+	width: 100%;
+	padding: 1rem;
+}
+
+.menu a{
+	border-radius: 3px;
+	display: block;
+	position: relative;
+	z-index: 1;
+	height: 250px;
+	box-shadow: 0 3px 3px #999;
+	position: relative;
+	transition: all .3s;
+	background-position: bottom;
+	background-size: cover;
+}
+
+.menu a:hover{
+	transition: all .3s;
+	box-shadow: 0 6px 6px #999;
+}
+
+.menu p{
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	padding: 1rem;
+	font-weight: bold;
+	border-top: solid 1px #eee;
+}
+
+#setting{
+	background-image: url(../../media/img/setting.jpg);
+}
+
+#rend{
+	background-image: url(../../media/img/rend.jpg);
+}
+
+#return{
+	background-image: url(../../media/img/return.jpg);
+}

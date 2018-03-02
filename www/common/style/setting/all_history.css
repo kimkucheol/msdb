@@ -1,0 +1,17 @@
+table td:nth-child(1){
+	/*width: 10rem;*/
+}
+
+h2 span {
+	padding-left: 2rem;
+}
+
+#pager{
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+}
+
+td:last-child,th:last-child{
+	text-align: right;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../common/script/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<form action="">
+		<input type="checkbox" id="af" value="10" checked>
+		<input type="checkbox" id="ag" value="20">
+		<input type="checkbox" id="ah" value="30">
+		<input type="checkbox" id="ai" value="40">
+		<input type="checkbox" id="aj" value="50">
+		<input type="checkbox" id="ak" value="60">
+	</form>
+	<div id="test"></div>
+
+	<script>
+		$(function () {
+			$("input[type='checkbox']:checked").each(function (i) {
+				$("#test").append('<label for=' + $(this).attr("id") + ' id="c_' + $(this).attr("id") + '">' + '仮' + '</label>');
+			})
+		$("input").click(function () {
+		var hoge = $(this).attr("id");
+			/*inputの属性を保存*/
+			if ($(this).prop('checked') == true) {
+				/*チェックが付けられたら複製*/
+				//var name=$(this).parent().next().html();
+				$("#test").append('<label for=' + hoge + ' id="c_' + hoge + '">' + '仮' + '</label>');
+			} else {
+				/*チェックが外されたら削除*/
+				$("#c_" + hoge).remove();
+			}
+			return true;
+		});
+		})
+	</script>
+</body>
+
+</html>

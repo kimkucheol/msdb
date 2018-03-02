@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="origin-when-crossorigin">
+<title>Select: master - Adminer</title>
+<link rel="stylesheet" type="text/css" href="?file=default.css&amp;version=4.3.1">
+<script type="text/javascript" src="?file=functions.js&amp;version=4.3.1"></script>
+<link rel="shortcut icon" type="image/x-icon" href="?file=favicon.ico&amp;version=4.3.1">
+<link rel="apple-touch-icon" href="?file=favicon.ico&amp;version=4.3.1">
+<link rel="stylesheet" type="text/css" href="adminer.css">
+
+<body class="ltr nojs" onkeydown="bodyKeydown(event);" onclick="bodyClick(event);">
+<script type="text/javascript">
+document.body.className = document.body.className.replace(/ nojs/, ' js');
+var offlineMessage = 'You are offline.';
+</script>
+
+<div id="help" class="jush-sqlite jsonly hidden" onmouseover="helpOpen = 1;" onmouseout="helpMouseout(this, event);"></div>
+
+<div id="content">
+<p id="breadcrumb"><a href="?sqlite=">SQLite 3</a> &raquo; <a href='?sqlite=&amp;username=admin' accesskey='1' title='Alt+Shift+1'>Server</a> &raquo; <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db">../sqlite/sqlite.db</a> &raquo; Select: master
+<h2>Select: master</h2>
+<div id='ajaxstatus' class='jsonly hidden'></div>
+<p class="links"> <a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master' class='active '>Select data</a> <a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=master'>Show structure</a> <a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=master'>Alter table</a> <a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=master'>New item</a>
+<form action='' id='form'>
+<div style='display: none;'><input type="hidden" name="sqlite" value=""><input type="hidden" name="username" value="admin"><input type="hidden" name="db" value="../sqlite/sqlite.db"><input type="hidden" name="select" value="master"></div>
+<fieldset><legend><a href='#fieldset-select' onclick="return !toggle('fieldset-select');">Select</a></legend><div id='fieldset-select' class='hidden'>
+<div><select name='columns[0][fun]' onchange='helpClose(); this.nextSibling.nextSibling.onchange();' onmouseover='helpMouseover(this, event, getTarget(event).value &amp;&amp; getTarget(event).value.replace(/ |$/, &#039;(&#039;) + &#039;)&#039;, 1);' onmouseout='helpMouseout(this, event);'><option><optgroup label="Functions"><option>hex<option>length<option>lower<option>round<option>unixepoch<option>upper</optgroup><optgroup label="Aggregation"><option>avg<option>count<option>count distinct<option>group_concat<option>max<option>min<option>sum</optgroup></select>(<select name='columns[0][col]' onchange='selectAddRow(this);'><option value=''><option value="code">code<option value="id">id<option value="name">name<option value="pass">pass<option value="administrator">administrator<option value="mail">mail</select>)</div>
+</div></fieldset>
+<fieldset><legend><a href='#fieldset-search' onclick="return !toggle('fieldset-search');">Search</a></legend><div id='fieldset-search' class='hidden'>
+<div><select name='where[0][col]' onchange='this.nextSibling.onchange();'><option value=''>(anywhere)<option value="code">code<option value="id">id<option value="name">name<option value="pass">pass<option value="administrator">administrator<option value="mail">mail</select><select name='where[0][op]' onchange="this.nextSibling.onchange();"><option>=<option>&lt;<option>&gt;<option>&lt;=<option>&gt;=<option>!=<option>LIKE<option>LIKE %%<option>IN<option>IS NULL<option>NOT LIKE<option>NOT IN<option>IS NOT NULL<option>SQL</select><input type='search' name='where[0][val]' value='' onchange='selectAddRow(this);' onkeydown='selectSearchKeydown(this, event);' onsearch='selectSearchSearch(this);'></div>
+</div></fieldset>
+<fieldset><legend><a href='#fieldset-sort' onclick="return !toggle('fieldset-sort');">Sort</a></legend><div id='fieldset-sort' class='hidden'>
+<div><select name='order[0]' onchange='selectAddRow(this);'><option value=''><option value="code">code<option value="id">id<option value="name">name<option value="pass">pass<option value="administrator">administrator<option value="mail">mail</select><label><input type='checkbox' name='desc[0]' value='1'>descending</label></div>
+</div></fieldset>
+<fieldset><legend>Limit</legend><div><input type='number' name='limit' class='size' value='50' onchange='selectFieldChange(this.form);'></div></fieldset>
+<fieldset><legend>Text length</legend><div><input type='number' name='text_length' class='size' value='100'></div></fieldset>
+<fieldset><legend>Action</legend><div><input type='submit' value='Select'> <span id='noindex' title='Full table scan'></span><script type='text/javascript'>
+var indexColumns = {
+	"code": null,
+	"rowid": null
+}
+;
+selectFieldChange(document.getElementById('form'));
+</script>
+</div></fieldset>
+</form>
+<p><code class='jush-sqlite'>SELECT *, rowid FROM &quot;master&quot; LIMIT 50</code> <span class='time'>(0.000 s)</span> <a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;sql=SELECT+%2A%2C+rowid%0AFROM+%22master%22%0ALIMIT+50'>Edit</a></p><form action='' method='post' enctype='multipart/form-data'>
+<table id='table' cellspacing='0' class='nowrap checkable' onclick='tableClick(event);' ondblclick='tableClick(event, true);' onkeydown='return editingKeydown(event);'>
+<thead><tr><td><input type='checkbox' id='all-page' onclick='formCheck(this, /check/);' class='jsonly'> <a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;modify=1'>Modify</a><th onmouseover="columnMouse(this);" onmouseout="columnMouse(this, ' hidden');"><a href="/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=code"><span title="integer">code</span></a><span class='column hidden'><a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=code&amp;desc%5B0%5D=1' title='descending' class='text'> ↓</a><a href="#fieldset-search" onclick="selectSearch('code'); return false;" title="Search" class="text jsonly"> =</a></span><th onmouseover="columnMouse(this);" onmouseout="columnMouse(this, ' hidden');"><a href="/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=id"><span title="text">id</span></a><span class='column hidden'><a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=id&amp;desc%5B0%5D=1' title='descending' class='text'> ↓</a><a href="#fieldset-search" onclick="selectSearch('id'); return false;" title="Search" class="text jsonly"> =</a></span><th onmouseover="columnMouse(this);" onmouseout="columnMouse(this, ' hidden');"><a href="/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=name"><span title="text">name</span></a><span class='column hidden'><a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=name&amp;desc%5B0%5D=1' title='descending' class='text'> ↓</a><a href="#fieldset-search" onclick="selectSearch('name'); return false;" title="Search" class="text jsonly"> =</a></span><th onmouseover="columnMouse(this);" onmouseout="columnMouse(this, ' hidden');"><a href="/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=pass"><span title="text">pass</span></a><span class='column hidden'><a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=pass&amp;desc%5B0%5D=1' title='descending' class='text'> ↓</a><a href="#fieldset-search" onclick="selectSearch('pass'); return false;" title="Search" class="text jsonly"> =</a></span><th onmouseover="columnMouse(this);" onmouseout="columnMouse(this, ' hidden');"><a href="/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=administrator"><span title="integer">administrator</span></a><span class='column hidden'><a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=administrator&amp;desc%5B0%5D=1' title='descending' class='text'> ↓</a><a href="#fieldset-search" onclick="selectSearch('administrator'); return false;" title="Search" class="text jsonly"> =</a></span><th onmouseover="columnMouse(this);" onmouseout="columnMouse(this, ' hidden');"><a href="/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=mail"><span title="text">mail</span></a><span class='column hidden'><a href='/adminer/?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master&amp;order%5B0%5D=mail&amp;desc%5B0%5D=1' title='descending' class='text'> ↓</a><a href="#fieldset-search" onclick="selectSearch('mail'); return false;" title="Search" class="text jsonly"> =</a></span></thead>
+<tr><td><input type='checkbox' name='check[]' value='where%5Bcode%5D=1' onclick="this.form[&#039;all&#039;].checked = false; formUncheck(&#039;all-page&#039;);"> <a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=master&amp;where%5Bcode%5D=1'>edit</a><td id='val[&amp;where%5Bcode%5D=1][code]' onclick="selectClick(this, event, 0);">1<td id='val[&amp;where%5Bcode%5D=1][id]' onclick="selectClick(this, event, 1);">1111<td id='val[&amp;where%5Bcode%5D=1][name]' onclick="selectClick(this, event, 1);">榎本先生<td id='val[&amp;where%5Bcode%5D=1][pass]' onclick="selectClick(this, event, 1);">1234<td id='val[&amp;where%5Bcode%5D=1][administrator]' onclick="selectClick(this, event, 0);">1<td id='val[&amp;where%5Bcode%5D=1][mail]' onclick="selectClick(this, event, 1);">&nbsp;</tr>
+</table>
+<p class='count'>
+(1 row) <label><input type='checkbox' name='all' value='1' onclick="var checked = formChecked(this, /check/); selectCount(&#039;selected&#039;, this.checked ? &#039;1&#039; : checked); selectCount(&#039;selected2&#039;, this.checked || !checked ? &#039;1&#039; : checked);">whole result</label>
+<fieldset class="jsonly"><legend>Modify</legend><div>
+<input type="submit" value="Save" title="Ctrl+click on a value to modify it.">
+</div></fieldset>
+<fieldset><legend>Selected <span id="selected"></span></legend><div>
+<input type="submit" name="edit" value="Edit">
+<input type="submit" name="clone" value="Clone">
+<input type="submit" name="delete" value="Delete" onclick="return confirm('Are you sure?');">
+</div></fieldset>
+<fieldset><legend><a href='#fieldset-export' onclick="return !toggle('fieldset-export');">Export <span id='selected2'></span></a></legend><div id='fieldset-export' class='hidden'>
+<select name='output'><option value="text">open<option value="file">save<option value="gz">gzip</select> <select name='format'><option value="sql">SQL<option value="csv">CSV,<option value="csv;">CSV;<option value="tsv">TSV</select> <input type='submit' name='export' value='Export'>
+</div></fieldset>
+<script type='text/javascript'>tableCheck();</script>
+<fieldset><legend><a href='#fieldset-import' onclick="return !toggle('fieldset-import');">Import</a></legend><div id='fieldset-import' class='hidden'>
+<input type='file' name='csv_file'> <select name='separator'><option value="csv">CSV,<option value="csv;">CSV;<option value="tsv">TSV</select> <input type='submit' name='import' value='Import'></div></fieldset>
+<p><input type='hidden' name='token' value='130855:636229'></p>
+</form>
+</div>
+
+<form action='' method='post'>
+<div id='lang'>Language: <select name='lang' onchange="this.form.submit();"><option value="en" selected>English<option value="ar">العربية<option value="bg">Български<option value="bn">বাংলা<option value="bs">Bosanski<option value="ca">Català<option value="cs">Čeština<option value="da">Dansk<option value="de">Deutsch<option value="el">Ελληνικά<option value="es">Español<option value="et">Eesti<option value="fa">فارسی<option value="fi">Suomi<option value="fr">Français<option value="gl">Galego<option value="hu">Magyar<option value="id">Bahasa Indonesia<option value="it">Italiano<option value="ja">日本語<option value="ko">한국어<option value="lt">Lietuvių<option value="nl">Nederlands<option value="no">Norsk<option value="pl">Polski<option value="pt">Português<option value="pt-br">Português (Brazil)<option value="ro">Limba Română<option value="ru">Русский<option value="sk">Slovenčina<option value="sl">Slovenski<option value="sr">Српски<option value="ta">த‌மிழ்<option value="th">ภาษาไทย<option value="tr">Türkçe<option value="uk">Українська<option value="vi">Tiếng Việt<option value="zh">简体中文<option value="zh-tw">繁體中文</select> <input type='submit' value='Use' class='hidden'>
+<input type='hidden' name='token' value='198998:738100'>
+</div>
+</form>
+<form action="" method="post">
+<p class="logout">
+<input type="submit" name="logout" value="Logout" id="logout">
+<input type="hidden" name="token" value="130855:636229">
+</p>
+</form>
+<div id="menu">
+<h1>
+<a href='https://www.adminer.org/' target='_blank' id='h1'>Adminer</a> <span class="version">4.3.1</span>
+<a href="https://www.adminer.org/#download" target="_blank" id="version">4.6.1</a>
+</h1>
+<script type="text/javascript" src="?file=jush.js&amp;version=4.3.1"></script>
+<script type="text/javascript">
+var jushLinks = { sqlite: [ '?sqlite=&username=admin&db=..%2Fsqlite%2Fsqlite.db&table=$&', /\b(category|class|item|lending|lending_log|master|sqlite_sequence|student)\b/g ] };
+jushLinks.bac = jushLinks.sqlite;
+jushLinks.bra = jushLinks.sqlite;
+jushLinks.sqlite_quo = jushLinks.sqlite;
+jushLinks.mssql_bra = jushLinks.sqlite;
+bodyLoad('3.1');
+</script>
+<form action="">
+<p id="dbs">
+<input type="hidden" name="sqlite" value=""><input type="hidden" name="username" value="admin"><span title='database'>DB</span>: <input name="db" value="../sqlite/sqlite.db" autocapitalize="off"><input type='submit' value='Use'>
+</p></form>
+<p class='links'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;sql='>SQL command</a>
+<a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;import='>Import</a>
+<a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;dump=master' id='dump'>Export</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=">Create table</a>
+<ul id='tables' onmouseover='menuOver(this, event);' onmouseout='menuOut(this);'>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=category" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=category" class='structure' title='Show structure'>category</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=class" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=class" class='structure' title='Show structure'>class</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=item" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=item" class='structure' title='Show structure'>item</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending" class='structure' title='Show structure'>lending</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending_log" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending_log" class='structure' title='Show structure'>lending_log</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master" class='active select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=master" class='structure' title='Show structure'>master</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=sqlite_sequence" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=sqlite_sequence" class='structure' title='Show structure'>sqlite_sequence</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=student" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=student" class='structure' title='Show structure'>student</a>
+</ul>
+</div>
+<script type="text/javascript">setupSubmitHighlight(document);</script>

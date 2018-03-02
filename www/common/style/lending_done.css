@@ -1,0 +1,8 @@
+.lending_done{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box{
+	padding: 3rem;
+}

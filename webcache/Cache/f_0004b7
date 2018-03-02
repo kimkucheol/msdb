@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="origin-when-crossorigin">
+<title>データベース: ../sqlite/sqlite.db - Adminer</title>
+<link rel="stylesheet" type="text/css" href="?file=default.css&amp;version=4.3.1">
+<script type="text/javascript" src="?file=functions.js&amp;version=4.3.1"></script>
+<link rel="shortcut icon" type="image/x-icon" href="?file=favicon.ico&amp;version=4.3.1">
+<link rel="apple-touch-icon" href="?file=favicon.ico&amp;version=4.3.1">
+<link rel="stylesheet" type="text/css" href="adminer.css">
+
+<body class="ltr nojs" onkeydown="bodyKeydown(event);" onclick="bodyClick(event);">
+<script type="text/javascript">
+document.body.className = document.body.className.replace(/ nojs/, ' js');
+var offlineMessage = 'You are offline.';
+</script>
+
+<div id="help" class="jush-sqlite jsonly hidden" onmouseover="helpOpen = 1;" onmouseout="helpMouseout(this, event);"></div>
+
+<div id="content">
+<p id="breadcrumb"><a href="?sqlite=">SQLite 3</a> &raquo; <a href='?sqlite=&amp;username=admin' accesskey='1' title='Alt+Shift+1'>サーバ</a> &raquo; データベース: ../sqlite/sqlite.db
+<h2>データベース: ../sqlite/sqlite.db</h2>
+<div id='ajaxstatus' class='jsonly hidden'></div>
+<p class="links"><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;database=">データベースを変更</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;schema=">構造</a>
+<h3 id='tables-views'>テーブルとビュー</h3>
+<form action='' method='post'>
+<fieldset><legend>データを検索する <span id='selected2'></span></legend><div><input type='search' name='query' value=''> <input type='submit' name='search' value='検索'>
+</div></fieldset>
+<table cellspacing='0' class='nowrap checkable' onclick='tableClick(event);' ondblclick='tableClick(event, true);'>
+<thead><tr class="wrap"><td><input id="check-all" type="checkbox" onclick="formCheck(this, /^(tables|views)\[/);" class="jsonly"><th>テーブル<td>エンジン<td>照合順序<td>データ長<td>索引長<td>空き<td>連番<td>行数</thead>
+<tr><td><input type='checkbox' name='tables[]' value='category' aria-labelledby='Table-category' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=category' title='構造' id='Table-category'>category</a><td id='Engine-category'>&nbsp;<td id='Collation-category'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=category' id='Data_length-category' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=category' id='Index_length-category' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=category' id='Data_free-category' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=category' id='Auto_increment-category' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=category' id='Rows-category' title='データ'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='class' aria-labelledby='Table-class' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=class' title='構造' id='Table-class'>class</a><td id='Engine-class'>&nbsp;<td id='Collation-class'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=class' id='Data_length-class' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=class' id='Index_length-class' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=class' id='Data_free-class' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=class' id='Auto_increment-class' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=class' id='Rows-class' title='データ'>?</a><tr><td><input type='checkbox' name='tables[]' value='item' aria-labelledby='Table-item' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=item' title='構造' id='Table-item'>item</a><td id='Engine-item'>&nbsp;<td id='Collation-item'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=item' id='Data_length-item' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=item' id='Index_length-item' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=item' id='Data_free-item' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=item' id='Auto_increment-item' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=item' id='Rows-item' title='データ'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='lending' aria-labelledby='Table-lending' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending' title='構造' id='Table-lending'>lending</a><td id='Engine-lending'>&nbsp;<td id='Collation-lending'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=lending' id='Data_length-lending' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=lending' id='Index_length-lending' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=lending' id='Data_free-lending' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=lending' id='Auto_increment-lending' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending' id='Rows-lending' title='データ'>?</a><tr><td><input type='checkbox' name='tables[]' value='lending_log' aria-labelledby='Table-lending_log' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending_log' title='構造' id='Table-lending_log'>lending_log</a><td id='Engine-lending_log'>&nbsp;<td id='Collation-lending_log'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=lending_log' id='Data_length-lending_log' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=lending_log' id='Index_length-lending_log' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=lending_log' id='Data_free-lending_log' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=lending_log' id='Auto_increment-lending_log' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending_log' id='Rows-lending_log' title='データ'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='master' aria-labelledby='Table-master' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=master' title='構造' id='Table-master'>master</a><td id='Engine-master'>&nbsp;<td id='Collation-master'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=master' id='Data_length-master' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=master' id='Index_length-master' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=master' id='Data_free-master' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=master' id='Auto_increment-master' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master' id='Rows-master' title='データ'>?</a><tr><td><input type='checkbox' name='tables[]' value='student' aria-labelledby='Table-student' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=student' title='構造' id='Table-student'>student</a><td id='Engine-student'>&nbsp;<td id='Collation-student'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=student' id='Data_length-student' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=student' id='Index_length-student' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=student' id='Data_free-student' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=student' id='Auto_increment-student' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=student' id='Rows-student' title='データ'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='sqlite_sequence' aria-labelledby='Table-sqlite_sequence' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=sqlite_sequence' title='構造' id='Table-sqlite_sequence'>sqlite_sequence</a><td id='Engine-sqlite_sequence'>&nbsp;<td id='Collation-sqlite_sequence'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=sqlite_sequence' id='Data_length-sqlite_sequence' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=sqlite_sequence' id='Index_length-sqlite_sequence' title='索引の変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=sqlite_sequence' id='Data_free-sqlite_sequence' title='項目の作成'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=sqlite_sequence' id='Auto_increment-sqlite_sequence' title='テーブルの変更'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=sqlite_sequence' id='Rows-sqlite_sequence' title='データ'>?</a><tr><td>&nbsp;<th>合計 8<td>&nbsp;<td>UTF-8<td align='right' id='sum-Data_length'>&nbsp;<td align='right' id='sum-Index_length'>&nbsp;<td align='right' id='sum-Data_free'>&nbsp;</table>
+<fieldset><legend>Selected <span id='selected'></span></legend><div><input type='submit' value='Vacuum' onmouseover='helpMouseover(this, event, &#039;VACUUM&#039;, 0);' onmouseout='helpMouseout(this, event);'> <input type='submit' name='truncate' value='Truncate' onclick="return confirm('実行しますか？');" onmouseover='helpMouseover(this, event, &#039;DELETE&#039;, 0);' onmouseout='helpMouseout(this, event);'> <input type='submit' name='drop' value='削除' onclick="return confirm('実行しますか？');" onmouseover='helpMouseover(this, event, &#039;DROP TABLE&#039;, 0);' onmouseout='helpMouseout(this, event);'>
+<input type='hidden' name='all' value='' onclick="selectCount('selected', formChecked(this, /^(tables|views)\[/)); selectCount('selected2', formChecked(this, /^tables\[/) || 8);">
+<input type='hidden' name='token' value='620972:157766'>
+</div></fieldset>
+</form>
+<script type='text/javascript'>tableCheck();</script>
+<p class="links"><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=">テーブルを作成</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;view=">ビューを作成</a>
+<script type='text/javascript'>ajaxSetHtml('?sqlite=&username=admin&db=..%2Fsqlite%2Fsqlite.db&script=db');</script>
+</div>
+
+<form action='' method='post'>
+<div id='lang'>言語: <select name='lang' onchange="this.form.submit();"><option value="en">English<option value="ar">العربية<option value="bg">Български<option value="bn">বাংলা<option value="bs">Bosanski<option value="ca">Català<option value="cs">Čeština<option value="da">Dansk<option value="de">Deutsch<option value="el">Ελληνικά<option value="es">Español<option value="et">Eesti<option value="fa">فارسی<option value="fi">Suomi<option value="fr">Français<option value="gl">Galego<option value="hu">Magyar<option value="id">Bahasa Indonesia<option value="it">Italiano<option value="ja" selected>日本語<option value="ko">한국어<option value="lt">Lietuvių<option value="nl">Nederlands<option value="no">Norsk<option value="pl">Polski<option value="pt">Português<option value="pt-br">Português (Brazil)<option value="ro">Limba Română<option value="ru">Русский<option value="sk">Slovenčina<option value="sl">Slovenski<option value="sr">Српски<option value="ta">த‌மிழ்<option value="th">ภาษาไทย<option value="tr">Türkçe<option value="uk">Українська<option value="vi">Tiếng Việt<option value="zh">简体中文<option value="zh-tw">繁體中文</select> <input type='submit' value='使用' class='hidden'>
+<input type='hidden' name='token' value='742277:17007'>
+</div>
+</form>
+<form action="" method="post">
+<p class="logout">
+<input type="submit" name="logout" value="ログアウト" id="logout">
+<input type="hidden" name="token" value="620972:157766">
+</p>
+</form>
+<div id="menu">
+<h1>
+<a href='https://www.adminer.org/' target='_blank' id='h1'>Adminer</a> <span class="version">4.3.1</span>
+<a href="https://www.adminer.org/#download" target="_blank" id="version">4.6.1</a>
+</h1>
+<script type="text/javascript" src="?file=jush.js&amp;version=4.3.1"></script>
+<script type="text/javascript">
+var jushLinks = { sqlite: [ '?sqlite=&username=admin&db=..%2Fsqlite%2Fsqlite.db&table=$&', /\b(category|class|item|lending|lending_log|master|sqlite_sequence|student)\b/g ] };
+jushLinks.bac = jushLinks.sqlite;
+jushLinks.bra = jushLinks.sqlite;
+jushLinks.sqlite_quo = jushLinks.sqlite;
+jushLinks.mssql_bra = jushLinks.sqlite;
+bodyLoad('3.1');
+</script>
+<form action="">
+<p id="dbs">
+<input type="hidden" name="sqlite" value=""><input type="hidden" name="username" value="admin"><span title='データベース'>DB</span>: <input name="db" value="../sqlite/sqlite.db" autocapitalize="off"><input type='submit' value='使用'>
+</p></form>
+<p class='links'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;sql='>SQLコマンド</a>
+<a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;import='>インポート</a>
+<a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;dump=' id='dump'>エクスポート</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=">テーブルを作成</a>
+<ul id='tables' onmouseover='menuOver(this, event);' onmouseout='menuOut(this);'>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=category" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=category" class='structure' title='構造'>category</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=class" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=class" class='structure' title='構造'>class</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=item" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=item" class='structure' title='構造'>item</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending" class='structure' title='構造'>lending</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending_log" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending_log" class='structure' title='構造'>lending_log</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=master" class='structure' title='構造'>master</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=sqlite_sequence" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=sqlite_sequence" class='structure' title='構造'>sqlite_sequence</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=student" class='select'>選択</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=student" class='structure' title='構造'>student</a>
+</ul>
+</div>
+<script type="text/javascript">setupSubmitHighlight(document);</script>

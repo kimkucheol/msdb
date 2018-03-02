@@ -1,0 +1,43 @@
+.lending_check{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lending_check form{
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 6px #aaa;
+	padding: 2rem
+}
+
+.button_flex{
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+#submit{
+	display: block;
+	margin-left: 1rem;
+}
+
+li span{
+	padding-left: 1rem;
+}
+
+.bold{
+	font-weight: 400;
+}
+
+.bold li{
+	font-weight: 300;
+}
+
+li ul li{
+	list-style: none;
+	margin-left: 2rem;
+}
+.button_flex input, .button_flex button{
+	margin-bottom: 0;
+}

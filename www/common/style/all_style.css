@@ -1,0 +1,124 @@
+/*
+全てのページで共通のCSS
+*/
+
+* {
+	user-select: none;
+}
+
+html,
+body {
+	background-color: #fafafa;
+	font-family: "Noto Sans CJK JP";
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+input,textarea{
+	font-family: "Noto Sans CJK JP";
+}
+
+header {
+	background-color: #4d4dca;
+	display: flex;
+	justify-content: flex-end;
+	padding: 2rem;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+header * {
+	color: #fff;
+	margin: 0;
+}
+
+header #id {
+	padding-right: 1rem;
+}
+
+header #logout {
+	color: #fff;
+}
+
+header h1 {
+	color: #fff;
+	line-height: 1;
+	/*h1だけ右寄せにするcss*/
+	margin-right: auto;
+	margin-left: 0;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#spacer {
+	display: block;
+	min-height: 6.8rem;
+	width: 100%;
+}
+
+.top {
+  /*高さを100%に指定したいとき*/
+	height: 100%;
+	overflow: auto;
+}
+
+.box{
+  /*箱を外枠につけたいとき*/
+	border-radius: 2px;
+	box-shadow: 0 2px 6px #aaa
+}
+
+/*戻るボタン*/
+.list{
+	min-width: 20rem;
+	box-shadow: 2px 0 6px #aaa;
+	position: relative;
+	z-index: 2;
+}
+
+.list li {
+	list-style: none;
+	padding: .5rem 2rem;
+	font-size: 1.8rem;
+	font-weight: 400;
+	border-bottom: solid 1px #eee;
+  margin-bottom: 0
+}
+
+iframe{
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+html, body, iframe { margin: 0; padding: 0; }
+
+li ul{
+  margin: 0;
+}
+
+.list li ul li{
+  font-size: 95%;
+  border: none;
+  list-style: circle;
+  margin-left: 2.5rem;
+  padding-left: .5rem;
+  padding-right: 0
+}
+
+.back{
+	margin-left: 0;
+	margin-right: 1rem;
+}
+
+.back img{
+	display: block;
+	height: 28px
+}

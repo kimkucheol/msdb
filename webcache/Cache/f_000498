@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="origin-when-crossorigin">
+<title>Database: ../sqlite/sqlite.db - Adminer</title>
+<link rel="stylesheet" type="text/css" href="?file=default.css&amp;version=4.3.1">
+<script type="text/javascript" src="?file=functions.js&amp;version=4.3.1"></script>
+<link rel="shortcut icon" type="image/x-icon" href="?file=favicon.ico&amp;version=4.3.1">
+<link rel="apple-touch-icon" href="?file=favicon.ico&amp;version=4.3.1">
+<link rel="stylesheet" type="text/css" href="adminer.css">
+
+<body class="ltr nojs" onkeydown="bodyKeydown(event);" onclick="bodyClick(event);">
+<script type="text/javascript">
+document.body.className = document.body.className.replace(/ nojs/, ' js');
+var offlineMessage = 'You are offline.';
+</script>
+
+<div id="help" class="jush-sqlite jsonly hidden" onmouseover="helpOpen = 1;" onmouseout="helpMouseout(this, event);"></div>
+
+<div id="content">
+<p id="breadcrumb"><a href="?sqlite=">SQLite 3</a> &raquo; <a href='?sqlite=&amp;username=admin' accesskey='1' title='Alt+Shift+1'>Server</a> &raquo; Database: ../sqlite/sqlite.db
+<h2>Database: ../sqlite/sqlite.db</h2>
+<div id='ajaxstatus' class='jsonly hidden'></div>
+<p class="links"><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;database=">Alter database</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;schema=">Database schema</a>
+<h3 id='tables-views'>Tables and views</h3>
+<form action='' method='post'>
+<fieldset><legend>Search data in tables <span id='selected2'></span></legend><div><input type='search' name='query' value=''> <input type='submit' name='search' value='Search'>
+</div></fieldset>
+<table cellspacing='0' class='nowrap checkable' onclick='tableClick(event);' ondblclick='tableClick(event, true);'>
+<thead><tr class="wrap"><td><input id="check-all" type="checkbox" onclick="formCheck(this, /^(tables|views)\[/);" class="jsonly"><th>Table<td>Engine<td>Collation<td>Data Length<td>Index Length<td>Data Free<td>Auto Increment<td>Rows</thead>
+<tr><td><input type='checkbox' name='tables[]' value='category' aria-labelledby='Table-category' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=category' title='Show structure' id='Table-category'>category</a><td id='Engine-category'>&nbsp;<td id='Collation-category'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=category' id='Data_length-category' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=category' id='Index_length-category' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=category' id='Data_free-category' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=category' id='Auto_increment-category' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=category' id='Rows-category' title='Select data'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='class' aria-labelledby='Table-class' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=class' title='Show structure' id='Table-class'>class</a><td id='Engine-class'>&nbsp;<td id='Collation-class'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=class' id='Data_length-class' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=class' id='Index_length-class' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=class' id='Data_free-class' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=class' id='Auto_increment-class' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=class' id='Rows-class' title='Select data'>?</a><tr><td><input type='checkbox' name='tables[]' value='item' aria-labelledby='Table-item' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=item' title='Show structure' id='Table-item'>item</a><td id='Engine-item'>&nbsp;<td id='Collation-item'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=item' id='Data_length-item' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=item' id='Index_length-item' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=item' id='Data_free-item' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=item' id='Auto_increment-item' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=item' id='Rows-item' title='Select data'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='lending' aria-labelledby='Table-lending' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending' title='Show structure' id='Table-lending'>lending</a><td id='Engine-lending'>&nbsp;<td id='Collation-lending'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=lending' id='Data_length-lending' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=lending' id='Index_length-lending' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=lending' id='Data_free-lending' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=lending' id='Auto_increment-lending' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending' id='Rows-lending' title='Select data'>?</a><tr><td><input type='checkbox' name='tables[]' value='lending_log' aria-labelledby='Table-lending_log' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending_log' title='Show structure' id='Table-lending_log'>lending_log</a><td id='Engine-lending_log'>&nbsp;<td id='Collation-lending_log'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=lending_log' id='Data_length-lending_log' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=lending_log' id='Index_length-lending_log' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=lending_log' id='Data_free-lending_log' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=lending_log' id='Auto_increment-lending_log' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending_log' id='Rows-lending_log' title='Select data'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='master' aria-labelledby='Table-master' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=master' title='Show structure' id='Table-master'>master</a><td id='Engine-master'>&nbsp;<td id='Collation-master'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=master' id='Data_length-master' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=master' id='Index_length-master' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=master' id='Data_free-master' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=master' id='Auto_increment-master' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master' id='Rows-master' title='Select data'>?</a><tr><td><input type='checkbox' name='tables[]' value='student' aria-labelledby='Table-student' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=student' title='Show structure' id='Table-student'>student</a><td id='Engine-student'>&nbsp;<td id='Collation-student'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=student' id='Data_length-student' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=student' id='Index_length-student' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=student' id='Data_free-student' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=student' id='Auto_increment-student' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=student' id='Rows-student' title='Select data'>?</a><tr class="odd"><td><input type='checkbox' name='tables[]' value='sqlite_sequence' aria-labelledby='Table-sqlite_sequence' onclick="formUncheck(&#039;check-all&#039;);"><th><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=sqlite_sequence' title='Show structure' id='Table-sqlite_sequence'>sqlite_sequence</a><td id='Engine-sqlite_sequence'>&nbsp;<td id='Collation-sqlite_sequence'>&nbsp;<td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=sqlite_sequence' id='Data_length-sqlite_sequence' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;indexes=sqlite_sequence' id='Index_length-sqlite_sequence' title='Alter indexes'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;edit=sqlite_sequence' id='Data_free-sqlite_sequence' title='New item'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;auto_increment=1&amp;create=sqlite_sequence' id='Auto_increment-sqlite_sequence' title='Alter table'>?</a><td align='right'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=sqlite_sequence' id='Rows-sqlite_sequence' title='Select data'>?</a><tr><td>&nbsp;<th>8 in total<td>&nbsp;<td>UTF-8<td align='right' id='sum-Data_length'>&nbsp;<td align='right' id='sum-Index_length'>&nbsp;<td align='right' id='sum-Data_free'>&nbsp;</table>
+<fieldset><legend>Selected <span id='selected'></span></legend><div><input type='submit' value='Vacuum' onmouseover='helpMouseover(this, event, &#039;VACUUM&#039;, 0);' onmouseout='helpMouseout(this, event);'> <input type='submit' name='truncate' value='Truncate' onclick="return confirm('Are you sure?');" onmouseover='helpMouseover(this, event, &#039;DELETE&#039;, 0);' onmouseout='helpMouseout(this, event);'> <input type='submit' name='drop' value='Drop' onclick="return confirm('Are you sure?');" onmouseover='helpMouseover(this, event, &#039;DROP TABLE&#039;, 0);' onmouseout='helpMouseout(this, event);'>
+<input type='hidden' name='all' value='' onclick="selectCount('selected', formChecked(this, /^(tables|views)\[/)); selectCount('selected2', formChecked(this, /^tables\[/) || 8);">
+<input type='hidden' name='token' value='337553:812736'>
+</div></fieldset>
+</form>
+<script type='text/javascript'>tableCheck();</script>
+<p class="links"><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=">Create table</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;view=">Create view</a>
+<script type='text/javascript'>ajaxSetHtml('?sqlite=&username=admin&db=..%2Fsqlite%2Fsqlite.db&script=db');</script>
+</div>
+
+<form action='' method='post'>
+<div id='lang'>Language: <select name='lang' onchange="this.form.submit();"><option value="en" selected>English<option value="ar">العربية<option value="bg">Български<option value="bn">বাংলা<option value="bs">Bosanski<option value="ca">Català<option value="cs">Čeština<option value="da">Dansk<option value="de">Deutsch<option value="el">Ελληνικά<option value="es">Español<option value="et">Eesti<option value="fa">فارسی<option value="fi">Suomi<option value="fr">Français<option value="gl">Galego<option value="hu">Magyar<option value="id">Bahasa Indonesia<option value="it">Italiano<option value="ja">日本語<option value="ko">한국어<option value="lt">Lietuvių<option value="nl">Nederlands<option value="no">Norsk<option value="pl">Polski<option value="pt">Português<option value="pt-br">Português (Brazil)<option value="ro">Limba Română<option value="ru">Русский<option value="sk">Slovenčina<option value="sl">Slovenski<option value="sr">Српски<option value="ta">த‌மிழ்<option value="th">ภาษาไทย<option value="tr">Türkçe<option value="uk">Українська<option value="vi">Tiếng Việt<option value="zh">简体中文<option value="zh-tw">繁體中文</select> <input type='submit' value='Use' class='hidden'>
+<input type='hidden' name='token' value='143985:750112'>
+</div>
+</form>
+<form action="" method="post">
+<p class="logout">
+<input type="submit" name="logout" value="Logout" id="logout">
+<input type="hidden" name="token" value="337553:812736">
+</p>
+</form>
+<div id="menu">
+<h1>
+<a href='https://www.adminer.org/' target='_blank' id='h1'>Adminer</a> <span class="version">4.3.1</span>
+<a href="https://www.adminer.org/#download" target="_blank" id="version">4.6.1</a>
+</h1>
+<script type="text/javascript" src="?file=jush.js&amp;version=4.3.1"></script>
+<script type="text/javascript">
+var jushLinks = { sqlite: [ '?sqlite=&username=admin&db=..%2Fsqlite%2Fsqlite.db&table=$&', /\b(category|class|item|lending|lending_log|master|sqlite_sequence|student)\b/g ] };
+jushLinks.bac = jushLinks.sqlite;
+jushLinks.bra = jushLinks.sqlite;
+jushLinks.sqlite_quo = jushLinks.sqlite;
+jushLinks.mssql_bra = jushLinks.sqlite;
+bodyLoad('3.1');
+</script>
+<form action="">
+<p id="dbs">
+<input type="hidden" name="sqlite" value=""><input type="hidden" name="username" value="admin"><span title='database'>DB</span>: <input name="db" value="../sqlite/sqlite.db" autocapitalize="off"><input type='submit' value='Use'>
+</p></form>
+<p class='links'><a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;sql='>SQL command</a>
+<a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;import='>Import</a>
+<a href='?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;dump=' id='dump'>Export</a>
+<a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;create=">Create table</a>
+<ul id='tables' onmouseover='menuOver(this, event);' onmouseout='menuOut(this);'>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=category" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=category" class='structure' title='Show structure'>category</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=class" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=class" class='structure' title='Show structure'>class</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=item" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=item" class='structure' title='Show structure'>item</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending" class='structure' title='Show structure'>lending</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=lending_log" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=lending_log" class='structure' title='Show structure'>lending_log</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=master" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=master" class='structure' title='Show structure'>master</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=sqlite_sequence" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=sqlite_sequence" class='structure' title='Show structure'>sqlite_sequence</a>
+<li><a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;select=student" class='select'>select</a> <a href="?sqlite=&amp;username=admin&amp;db=..%2Fsqlite%2Fsqlite.db&amp;table=student" class='structure' title='Show structure'>student</a>
+</ul>
+</div>
+<script type="text/javascript">setupSubmitHighlight(document);</script>

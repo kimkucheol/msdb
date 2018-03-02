@@ -1,0 +1,48 @@
+input[type="file"]{
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  bottom: -2rem;
+  left: 1rem;
+  z-index: 1;
+  opacity: 0
+}
+
+.add_item input[type="submit"]{
+  display: block;
+  text-align: right;
+}
+
+label{
+  position: relative;
+  display: inline-block;
+  padding-right: 1rem;
+  z-index: 2;
+}
+
+.flex{
+  align-items: baseline;
+  display: flex;
+  margin-bottom: 3rem
+}
+
+.flex p{
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.flex.end{
+  margin: 0 -1rem;
+  justify-content: flex-end;
+}
+
+.flex.end input{
+  margin: 0 1rem;
+  display: block;
+  align-items: flex-end;
+}
+
+#input_file_name{
+margin: 0;
+  margin-left: 1rem;
+}

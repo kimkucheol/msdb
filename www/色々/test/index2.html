@@ -1,0 +1,27 @@
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1"><br />
+<input type="checkbox" value="1">
+<script src="../../common/script/jquery-3.2.1.min.js"></script>
+<script>
+$("input[type=checkbox]").click(function(){
+    var $count = $("input[type=checkbox]:checked").length;
+    var $not = $('input[type=checkbox]').not(':checked')
+
+    if($count >= 3) {
+        $not.attr("disabled",true);
+    }else{
+        $not.attr("disabled",false);
+    }
+});
+</script>

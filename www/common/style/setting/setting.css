@@ -1,0 +1,22 @@
+.setting{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 3rem;
+}
+
+h2{
+  border-left: solid 2px #4d4dca;
+  padding: 0 0 .3rem .5rem;
+}
+
+form p{
+	margin: 1rem 0;
+}
+
+table{
+  margin: auto;
+}
+
+.w90{
+max-width: 90%;
+}

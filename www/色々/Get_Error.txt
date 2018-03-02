@@ -1,0 +1,8 @@
+﻿DBのエラーを出力
+echo $e->getMessage();
+
+PHPのエラーを出力
+ini_set( 'display_errors', 1 );
+
+配列をとりあえず出力
+echo '<pre>'.var_export($bufArr).'</pre>';

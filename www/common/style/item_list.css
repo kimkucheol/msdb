@@ -1,0 +1,143 @@
+*{
+	margin-top: 0;
+	list-style: none;
+}
+
+a{
+	display: block;
+}
+
+form input[type="checkbox"]{
+	display: none;
+}
+form input[type="checkbox"]:checked + label::after{
+	display: block;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: solid 6px #4d4dca;
+	z-index: 98;
+	top: 0;
+	left: 0;
+}
+
+#item_list{
+	height: 100%;
+}
+
+#category{
+	padding: 1rem;
+	position: fixed;
+	height: 100%;
+	left: 0;
+	top: 6.8rem;
+	width: 22rem;
+	box-shadow: 3px 0 3px #ddd;
+	z-index: 999;
+	background-color: #fff;
+}
+
+#category h2{
+	margin: 0;
+	padding: 1rem .5rem;
+	font-size: 1.6rem;
+}
+
+#category li{
+	padding: .5rem;
+	border-bottom: solid 1px #eee;
+	font-weight: bold;
+}
+
+form{
+	padding: 2rem;
+	margin-left:22rem;
+}
+
+#flex_container{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding-bottom: 3rem;
+}
+#flex_container h3{
+	padding-top: 3rem;
+	width: 100%;
+}
+#flex_container h3:first-of-type{
+	padding: 0;
+}
+#flex_container > div{
+	width: 20%;
+	padding: .5rem;
+}
+label{
+	overflow: hidden;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: 0 3px 3px #999;
+	transition: all .5s;
+}
+
+label p{
+	margin: 0;
+	padding: .5rem 1rem;
+}
+
+label:hover{
+	transition: all .5s;
+	box-shadow: 0 6px 6px;
+}
+.thmb{
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px 3px 0 0;
+}
+
+.thmb img{
+	width: 100%;
+	z-index: 1;
+	display: block;
+}
+
+.thmb p{
+	position: absolute;
+	margin: 0;
+	padding: .5rem 1rem .2rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+
+
+#select_item{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	width: 100%;
+	background-color: #fff;
+	z-index: 99;
+	/* box-shadow: 3px -3px 3px #ddd; */
+	border-top: solid 1px #ddd;
+}
+#select_item >div{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.input_block{
+	display: block;
+	margin: 0;
+	margin-left: 1rem;
+}
+
+#select_item p{
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin: 0;
+}

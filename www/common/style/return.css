@@ -1,0 +1,46 @@
+.return{
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.item_list{
+  margin: 2rem auto
+}
+
+.select_item{
+  position: sticky;
+  padding: 2rem;
+  min-width: 30rem;
+  box-shadow: -2px 0 6px #aaa;
+}
+
+.select_item li{
+  list-style: none
+}
+
+.item{
+  padding: 2rem;
+  min-width: 60rem
+}
+
+input[type="checkbox"]{
+  display: block;
+  margin: auto
+}
+
+table label{
+  margin: 0
+}
+
+.no_item{
+  margin: auto;
+}
+
+.no_item p{
+  text-align: center;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 700;
+}
