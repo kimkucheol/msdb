@@ -12,3 +12,5 @@
 - sqliteのファイルのパス ../sqlite/sqlite.db
 	-	この中にユーザーデータや備品が入っています
 
+## Github
+[kato83's msdb](https://github.com/kato83/msdb)
